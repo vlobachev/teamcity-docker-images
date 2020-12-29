@@ -4,8 +4,6 @@ ARG teamcityAgentImage='teamcity-agent:local-linux'
 # The list of required arguments
 # ARG teamcityAgentImage
 
-
-
 FROM ${teamcityAgentImage}
 
 USER root

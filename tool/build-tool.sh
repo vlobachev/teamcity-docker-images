@@ -9,14 +9,6 @@ case $(uname | tr '[:upper:]' '[:lower:]') in
     export RID=osx-x64
     export TOOL=TeamCity.Docker
     ;;
-  msys*)
-    export RID=win-x64
-    export TOOL=TeamCity.Docker.exe
-    ;;
-  *)
-    export RID=win-x64
-    export TOOL=TeamCity.Docker.exe
-    ;;
 esac
 
 bash $(dirname "$0")/sdk.sh dotnet publish "tool/TeamCity.Docker/TeamCity.Docker.csproj" -f netcoreapp3.1 -c release -r $RID --nologo -o bin /p:PublishSingleFile=true
